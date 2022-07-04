@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      fieldset {
+        border-color: blue;
+        border-width: 3px;
+        border-style: solid;
+      }
+      fieldset > legend {
+        color: red;
+      }
+      p > label {
+        display: block;
+      }
+      input {
+        border-radius: 8px;
+      }
+      input:valid {
+        border-color: green;
+      }
+      input:invalid {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Contact us</h2>
+    <form
+      action="search.html"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <fieldset>
+        <legend>Contact Informaion</legend>
+        <label for="namee"> Your Name:</label>
+        <input id="namee" type="text" name="customerName" required /> <br />
+        Your Email: <input type="email" name="customerEmail" /> <br />
+        Your Phone: <input type="tel" name="customerPhone" />
+        <input type="hidden" name="source" value="ContactForm" /> <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Feedback</legend>
+
+        Your Feedback:
+        <textarea name="feedbackText" id="" cols="30" rows="3"></textarea>
+        <br />
+        Issue Date: <input type="date" /> <br />
+        Issue time:<input type="time" name="" id="" /> <br />
+        servity: <input type="range" name="" id="" /> <br />
+
+        select one:
+        <select name="select types" id="">
+          <option value="web store">web store</option>
+          <option value="Physical store">physical store</option>
+          <optgroup label="test ">
+            <option value="Web Issue ">web Issue</option>
+            <option value="Web Issue ">web Issue</option>
+          </optgroup>
+        </select>
+        <br />
+
+        <label for="cell">
+          <input id="cell" type="radio" name="phoneType" value="cell" />Cell
+        </label>
+        <label for="work">
+          <input id="work" type="radio" name="phoneType" value="work" />Work
+        </label>
+        <label for="home">
+          <input id="home" type="radio" name="phoneType" value="home" />Home
+        </label>
+      </fieldset>
+
+      <input type="submit" value="send contact" />
+    </form>
+  </body>
+</html>
